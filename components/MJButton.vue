@@ -1,5 +1,13 @@
 <template>
-  <div class="flex flex-col gap-4">
-    <UButton color="lavender" variant="solid">Button</UButton>
-  </div>
+  <UButton color="mj-primary" variant="solid" class="w-auto flex justify-center"
+    >{{ title }}</UButton
+  >
 </template>
+<script setup lang="ts">
+  const props = defineProps({
+    title: {
+      type: String,
+      default: 'Example'
+    }
+  })
+</script>
